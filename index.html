@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        #hero{
+            background-color: blueviolet;
+            font-size: 30px;
+        }
+
+        #images{
+            width: 80%;
+        }
+    </style>
 </head>
 <body>
     
@@ -12,14 +23,47 @@
         let data = document.createElement("section")
         data.id = "hero"
         
-        let list = document.createElement("ul")
-        list.className = "li"
-
+        data.innerHTML = "<div> <b> I am Emmanuel, <br> I finished from UJ, </b> <br> <i> from benue state </i> <br> the last born out of the family of five </div>"
         
-        data.innerHTML = "<div> I am Emmanuel </div>"
-        list.innerHTML = " <ol> i am tall </ol> "
+        let ordList = document.createElement("ol")
+
+        item1 = document.createElement("li")
+        item1.innerHTML = "I am tall"
+
+        item2 = document.createElement("li")
+        item2.innerHTML = "I am Smart"
+
+        item3 = document.createElement("li")
+        item3.innerHTML = "I am a Bright Student"
+
+        item4 = document.createElement("li")
+        item4.innerHTML = "I am a Brilliant"
+
+        item5 = document.createElement("li")
+        item5.innerHTML = "I am a Software Developer"
+
+        ordList.appendChild(item1)
+        ordList.appendChild(item2)
+        ordList.appendChild(item3)
+        ordList.appendChild(item4)
+        ordList.appendChild(item5)
+
+
+        let work = document.createElement("section")
+        work.id = "work"
+
+        work.innerHTML = "<div> i have worked in many places </div>"
+
+        img = document.createElement("input")
+        img.id = "images"
+        img.type = "image"
+        img.src = "code.jpg"
+        
 
         document.querySelector("body").appendChild(data)
+        document.querySelector("body").appendChild(ordList)
+        document.querySelector("body").appendChild(img)
+        document.querySelector("body").appendChild(work)
     </script>
 </body>
 </html>
